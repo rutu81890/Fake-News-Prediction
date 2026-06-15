@@ -133,5 +133,6 @@ notebooks/Fake_News_Detection.ipynb
 ## Author
 
 Rutu Patel
+
 Master's in Computer Engineering
 
