@@ -27,6 +27,13 @@ The workflow includes:
 
 ## Dataset
 
+The dataset used in this project is publicly available on Kaggle:
+
+Dataset Link:
+https://www.kaggle.com/datasets/monal007/traindata
+
+Download the dataset
+
 Dataset contains:
 
 - Author
