@@ -83,7 +83,7 @@ Models are evaluated using:
 
 | Model | Accuracy |
 |---------|----------|
-| Logistic Regression | ~98% |
+| Logistic Regression | ~97% |
 | Naive Bayes | ~95% |
 
 *(Results may vary slightly based on train-test split.)*
@@ -100,7 +100,7 @@ Models are evaluated using:
 ### Clone Repository
 
 ```bash
-git clone https://github.com/yourusername/Fake-News-Detection.git
+git clone https://github.com/rutu81890/Fake-News-Detection.git
 ```
 
 ### Install Dependencies
