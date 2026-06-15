@@ -92,9 +92,9 @@ Models are evaluated using:
 
 ### Clone Repository
 
-'''bash
+```bash
 git clone https://github.com/yourusername/Fake-News-Detection.git
-'''
+```
 
 ### Install Dependencies
 
