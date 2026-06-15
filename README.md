@@ -1,75 +1,130 @@
-# Fake News Prediction
-A machine learning project that detects fake news articles using Natural Language Processing (NLP) and Logistic Regression. The model analyzes the author and title of a news article to classify it as Real or Fake.
+# Fake News Detection Using Machine Learning
 
-How It Works
+## Project Overview
 
-Data Loading – Loads a labeled news dataset (train.csv)
-Preprocessing – Combines author + title into a single content field
-Text Stemming – Removes stopwords and stems words using NLTK's PorterStemmer
-TF-IDF Vectorization – Converts text into numerical feature vectors
-Model Training – Trains a Logistic Regression classifier
-Evaluation – Reports accuracy, classification report, and confusion matrix
-Prediction – Predicts whether a custom news headline is real or fake
+This project uses Natural Language Processing (NLP) and Machine Learning techniques to classify news articles as Real or Fake.
 
-Project Structure
+The workflow includes:
 
-fake-news-prediction/
-- Fake_News_Prediction.ipynb   # Main Jupyter Notebook
-- train.csv                    # Dataset (not included — see below)
-- requirements.txt             # Python dependencies
-- .gitignore                   # Files to exclude from Git
-- README.md                    # Project documentation
+- Data Cleaning
+- Text Preprocessing
+- Stemming
+- TF-IDF Vectorization
+- Logistic Regression
+- Naive Bayes Classification
+- Model Evaluation
+- Confusion Matrix Visualization
 
+## Technologies Used
 
-Dataset
+- Python
+- Pandas
+- NumPy
+- NLTK
+- Scikit-learn
+- Matplotlib
+- Seaborn
 
-This project uses the Fake News dataset from Kaggle:
-🔗 https://www.kaggle.com/c/fake-news/data
+## Dataset
 
-Download train.csv and place it in the root of this project folder.
+Dataset contains:
 
-ColumnDescriptionidUnique ID for each articletitleHeadline of the news articleauthorAuthor of the articletextFull article bodylabel0 = Real News, 1 = Fake News
+- Author
+- Title
+- News Label
 
+Target Variable:
 
-Installation
-
-1. Clone the repository
-
-bashgit clone https://github.com/YOUR_USERNAME/fake-news-prediction.git
-cd fake-news-prediction
-
-2. Install dependencies
-
-bashpip install -r requirements.txt
-
-3. Download the dataset
-
-Download train.csv from Kaggle and place it in the project folder.
-
-4. Run the notebook
-
-bashjupyter notebook Fake_News_Prediction.ipynb
+- 0 → Real News
+- 1 → Fake News
 
 
-Results
+## Workflow
 
-MetricScoreTraining Accuracy~98%Testing Accuracy~97%
+### 1. Data Preprocessing
 
-The model outputs a confusion matrix heatmap using Seaborn for visual evaluation.
+- Handle missing values
+- Combine author and title columns
+- Remove special characters
+- Convert text to lowercase
+- Remove stopwords
+- Apply stemming
 
-Tech Stack
+### 2. Feature Engineering
 
-Tool / LibraryPurposePythonCore programming languagePandas & NumPyData manipulationNLTKText preprocessing & stemmingScikit-learnTF-IDF vectorization & modelMatplotlib/SeabornVisualizationJupyter NotebookInteractive development
+TF-IDF Vectorization is used to convert text into numerical features.
 
-Example Prediction
+### 3. Model Training
 
-pythonnews = ["Breaking: Government announces new economic reforms"]
-news_vector = vectorizer.transform(news)
-prediction = model.predict(news_vector)
+#### Logistic Regression
 
-if prediction[0] == 0:
-    print("Real News")
-else:
-    print("Fake News")
+- Max Iterations: 1000
+
+#### Naive Bayes
+
+- Multinomial Naive Bayes
+
+### 4. Evaluation
+
+Models are evaluated using:
+
+- Accuracy Score
+- Classification Report
+- Confusion Matrix
+
+## Results
+
+| Model | Accuracy |
+|---------|----------|
+| Logistic Regression | ~98% |
+| Naive Bayes | ~95% |
+
+*(Results may vary slightly based on train-test split.)*
+
+## Visualizations
+
+- Model Accuracy Comparison
+- Logistic Regression Confusion Matrix
+- Naive Bayes Confusion Matrix
 
 
+## How to Run
+
+### Clone Repository
+
+'''bash
+git clone https://github.com/yourusername/Fake-News-Detection.git
+'''
+
+### Install Dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Launch Notebook
+
+```bash
+jupyter notebook
+```
+
+Open:
+
+```text
+notebooks/Fake_News_Detection.ipynb
+```
+
+## Future Improvements
+
+- Random Forest Classifier
+- XGBoost
+- Hyperparameter Tuning
+- Streamlit Web App
+- Deployment on Render/Heroku
+
+
+## Author
+
+Rutu Patel
+
+Master's in Computer Science
